@@ -1,0 +1,204 @@
+@import '_variables.scss';
+
+@font-face {
+	font-family: "Montserrat-perso";
+	src: url('./../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+	font-family: "OpenSans-perso";
+	src: url('./../fonts/OpenSans-Regular.ttf');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+
+html, body{
+    height: 100%;
+    font-family: "Montserrat-perso";
+    overflow: hidden;
+}
+
+.container{
+    margin: 0 auto;
+    height: 100%;
+    width: 1200px;
+    //transform: scale(.65, .75);
+    .game{
+        margin: 100px 0;
+        background: black;
+        width: 100%;
+        height: 750px;
+        border: 1px solid black;
+        position: relative;
+        overflow: hidden;
+        .timer{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 250px;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            z-index: 9999;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.356);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            form{
+                margin-top: 15px;
+            }
+            button{
+                padding: 5px;
+                margin-top: 10px;
+                background: $light-teal;
+                border: none;
+                border-radius: 5px;
+            }
+            .scores{
+                box-sizing: border-box;
+                text-align: center;
+                position: absolute;
+                -webkit-border-radius: 0 15px 15px 0;
+                border-radius: 0 15px 15px 0;
+                width: 30%;
+                height: 80%;
+                top: 10%;
+                left: -30%;
+                border: 1px solid black;
+                border-left: none;
+                background: rgba(255, 255, 255, 0.233);
+                h2{
+                    margin: 5% 0;
+                }
+                table{
+                    
+                }
+                th{
+                    width: 33%;
+                }
+                td{
+                    width: 33%;
+                    text-align: center;
+                }
+            }
+            h1{
+                font-size: 7rem;
+            }
+            .start{
+                padding: 10px;
+                font-size: 3rem;
+                background: $red;
+                border-radius: 15px;
+                font-family: "Montserrat-perso";
+            }
+        }
+        &.end{
+            font-family: "Montserrat-perso";
+            background: $lime;
+            color: black;
+            font-size: 3em;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            a{
+                margin-top: 30px;
+                padding: 10px;
+                text-decoration: none;
+                background-color: $indigo;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+        &.win{
+            font-family: "Montserrat-perso";
+            color: black;
+            font-size: 3em;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            a{
+                margin-top: 30px;
+                padding: 10px;
+                text-decoration: none;
+                background-color: $amber;
+                color: black;
+                border-radius: 5px;
+            }
+        }
+        .car{
+            position: absolute;
+            top: 4px;
+            left: 5px;
+            height: 50px;
+            z-index: 1;
+            background-color: lightgrey;
+            
+        }
+        .frog{
+            position: absolute;
+            z-index: 9000;
+            background: $lime;
+        }
+        .log{
+            position: absolute;
+            z-index: 10;
+            width: 0;
+            height: 0;
+            background: rgb(61, 39, 18)
+        }
+        .sol{
+            box-sizing: border-box;
+            height: 50px;
+            background: $green;
+            width: 100%;
+        }
+        .route{
+            box-sizing: border-box;
+            height: 300px;
+            background: dimgray;
+            width: 100%;
+            .lane{
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                height: 50px;
+                border-bottom: 1px dashed white;
+                &:last-of-type{
+                    border-bottom: none; 
+                }
+            }
+        }
+        .riviere{
+            box-sizing: border-box;
+            height: 300px;
+            background: $blue;
+            width: 100%;
+            .flow{
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                height: 50px;
+            }
+        }
+    }
+}
+
+
+            
