@@ -8,13 +8,7 @@ class Connexion{
             $this->bdd = new PDO('mysql:host=localhost;dbname=Database operations
 db746191009', 'dbo746191009', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
         }
-        else{
-            //mettre ici les infos de connexion sur un service distant. 
-        }
     }
-    //methodes
-    //listeners
-    //Getters - Setters
 public static function getInstance(){
   
     if(is_null(self::$_instance)){
